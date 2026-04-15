@@ -4,7 +4,7 @@ class MyWindow:
   def __init__(self): 
      self.window = tk.Tk()
      self.window.title("Andmete sisestamine")
-     self.window.geometry("600x500")
+     self.window.geometry("450x350")
 
 # Заголовки
      tk.Label(self.window, text="Имя").grid(row=0, column=0)
@@ -17,11 +17,17 @@ class MyWindow:
      self.entry_surname = tk.Entry(self.window)
      self.entry_surname.grid(row=1, column=1, padx=15)
 
-     tk.Label(self.window, text="Личный код").grid(row=2, column=0, columnspan=2)
+     tk.Label(self.window, text="Личный код").grid(row=2, column=0, columnspan=2,sticky="w", padx=15)
 
-        #поле ввода для личного кода
+#поле ввода для личного кода
      self.entry_code = tk.Entry(self.window)
-     self.entry_code.grid(row=3, column=0, columnspan=2, padx=15, pady=5)
+     self.entry_code.grid(row=3, column=0, columnspan=2, padx=1, pady=5, sticky="w")
+
+# Номер телефона (справа)
+     tk.Label(self.window, text="Номер телефона").grid(row=0, column=15, sticky="e", padx=10)
+
+     self.entry_phone = tk.Entry(self.window)
+     self.entry_phone.grid(row=1, column=15, sticky="e", padx=10)
 
   def run(self):
     self.window.mainloop()
