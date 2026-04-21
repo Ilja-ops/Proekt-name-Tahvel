@@ -83,6 +83,13 @@ def open_andme(self):
 
       tk.Label(self.window, text="Aadress").grid(row=0, column=0)
       tk.Label(self.window, text="Esindaja").grid(row=0, column=1, padx=15)
+
+      self.entry_aadress = tk.Entry(andme)
+      self.entry_aadress.grid(row=1, column=0)
+
+      self.entry_esindaja = tk.Entry(andme)
+      self.entry_esindaja.grid(row=1, column=1, padx=15)
+
 def run(self):
     self.window.mainloop()
 
