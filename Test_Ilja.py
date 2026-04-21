@@ -38,8 +38,11 @@ class MyWindow:
 
      self.entry_kool = tk.Entry(self.window)
      self.entry_kool.grid(row=3, column=15, sticky="e", padx=10)
-
-
+#под датой рождения
+     tk.Label(self.window, text="Пол").grid(row=4, column=1, padx=15)
+     
+     self.entry_sugu = tk.Entry(self.window)
+     self.entry_sugu.grid(row=5, column=1, padx=15)
 
   def run(self):
     self.window.mainloop()
