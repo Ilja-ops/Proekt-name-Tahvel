@@ -81,7 +81,8 @@ def open_andme(self):
       andme.title("Andmete sisestamine")
       andme.geometry("450x200")
 
-
+      tk.Label(self.window, text="Aadress").grid(row=0, column=0)
+      tk.Label(self.window, text="Esindaja").grid(row=0, column=1, padx=15)
 def run(self):
     self.window.mainloop()
 
