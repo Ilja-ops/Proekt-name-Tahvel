@@ -28,11 +28,17 @@ class MyWindow:
 
      self.entry_phone = tk.Entry(self.window)
      self.entry_phone.grid(row=1, column=15, sticky="e", padx=10)
-
-  tk.Label(self.window, text="Дата рождения").grid(row=2, column=1, padx=15)
+#под фамилией в центре
+     tk.Label(self.window, text="Дата рождения").grid(row=2, column=1, padx=15)
      
      self.entry_surname = tk.Entry(self.window)
      self.entry_surname.grid(row=3, column=1, padx=15)
+#под номером телефона
+     tk.Label(self.window, text="Год окончания школы").grid(row=2, column=15, sticky="e", padx=10)
+
+     self.entry_kool = tk.Entry(self.window)
+     self.entry_kool.grid(row=3, column=15, sticky="e", padx=10)
+
 
 
   def run(self):
