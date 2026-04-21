@@ -44,6 +44,10 @@ class MyWindow:
      self.entry_sugu = tk.Entry(self.window)
      self.entry_sugu.grid(row=5, column=1, padx=15)
 
+  # кнопка сохранить
+    tk.Button(self.window, text="Сохранить", command=self.save).grid(row=6, column=0, columnspan=2)
+
+       
   def run(self):
     self.window.mainloop()
 
