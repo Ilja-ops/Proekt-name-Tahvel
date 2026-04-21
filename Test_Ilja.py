@@ -71,9 +71,18 @@ class MyWindow:
           f.write(age + "\n")
           f.write(school + "\n")
           f.write(gender + "\n")
+# открываем новое окно
+# avame uue akna
+      self.open_andme()
+# новое окно 
+# uus aken 
+def open_andme(self):
+      andme = tk.Toplevel(self.window)
+      andme.title("Andmete sisestamine")
+      andme.geometry("450x200")
 
-       
-  def run(self):
+
+def run(self):
     self.window.mainloop()
 
 app = MyWindow()
