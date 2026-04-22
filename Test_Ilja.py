@@ -1,10 +1,16 @@
 import customtkinter as ctk
 
 class MyWindow:
-  def __init__(self): 
-     self.window = tk.Tk()
-     self.window.title("Andmete sisestamine")
-     self.window.geometry("450x200")
+  def __init__(self):
+    ctk.set_appearance_mode("light")
+    ctk.set_default_color_theme("blue")
+    
+     self.window = ctk.CTk()
+     self.window.title("Tahvel")
+     self.window.geometry("500x600")
+#коробка которая не даст поля ввода быть разбросанными 
+#kast, mis hoiab sisestusväljad korras 
+    
 # Заголовки
 # Pealkirjad
      tk.Label(self.window, text="Имя").grid(row=0, column=0)
