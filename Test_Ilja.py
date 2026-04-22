@@ -16,24 +16,23 @@ class MyWindow:
     ctk.CTkLabel(frame, text="Registreerimine", font=("Arial", 20)).pack(pady=10)
     # Поля ввода
     # Sisestusväljad 
-     self.entry_name = ctk.CTkEntry(frame, placeholder_text="Имя")
+
+    #поле под имя(внутри поля)
+    #nimeväli (välja sees)
+     self.entry_name = ctk.CTkEntry(frame, placeholder_text="Nimi")
      self.entry_name.pack(pady=5, fill="x")
-
-     self.entry_surname = ctk.CTkEntry(frame, placeholder_text="Фамилия")
+#поле под фамлию(внутри поля)
+#perekonnanime väli (välja sees)
+     self.entry_surname = ctk.CTkEntry(frame, placeholder_text="perekonnanimi")
      self.entry_surname.pack(pady=5, fill="x")
-
-     tk.Label(self.window, text="Личный код").grid(row=2, column=0, columnspan=2,sticky="w", padx=15)
-#поле ввода для личного кода
-#isikliku koodi sisestusväli
-     self.entry_code = tk.Entry(self.window)
-     self.entry_code.grid(row=3, column=0, columnspan=2, padx=1, pady=5, sticky="w")
-
-# Номер телефона (справа)
-#Telefoninumber (paremal)
-     tk.Label(self.window, text="Номер телефона").grid(row=0, column=15, sticky="e", padx=10)
-
-     self.entry_phone = tk.Entry(self.window)
-     self.entry_phone.grid(row=1, column=15, sticky="e", padx=10)
+#поле под личный код(внутри поля)
+#isikliku koodi väli (välja sees)
+     self.entry_code = ctk.CTkEntry(frame, placeholder_text="isikukood")
+     self.entry_code.pack(pady=5, fill="x")
+#поле под телефон(внутри поля)
+#telefoninumber (välja sees)
+     self.entry_phone = ctk.CTkEntry(frame, placeholder_text="Telefon")
+     self.entry_phone.pack(pady=5, fill="x")
 #под фамилией в центре
 #perekonnanime all keskel
      tk.Label(self.window, text="Дата рождения").grid(row=2, column=1, padx=15)
