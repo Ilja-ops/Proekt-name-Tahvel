@@ -33,24 +33,18 @@ class MyWindow:
 #telefoninumber (välja sees)
      self.entry_phone = ctk.CTkEntry(frame, placeholder_text="Telefon")
      self.entry_phone.pack(pady=5, fill="x")
-#под фамилией в центре
-#perekonnanime all keskel
-     tk.Label(self.window, text="Дата рождения").grid(row=2, column=1, padx=15)
-     
-     self.entry_surname = tk.Entry(self.window)
-     self.entry_surname.grid(row=3, column=1, padx=15)
-#под номером телефона
-#telefoninumbri all
-     tk.Label(self.window, text="Год окончания школы").grid(row=2, column=15, sticky="e", padx=10)
-
-     self.entry_kool = tk.Entry(self.window)
-     self.entry_kool.grid(row=3, column=15, sticky="e", padx=10)
-#под датой рождения
-#sünnikuupäeva all
-     tk.Label(self.window, text="Пол").grid(row=4, column=1, padx=15)
-     
-     self.entry_sugu = tk.Entry(self.window)
-     self.entry_sugu.grid(row=5, column=1, padx=15)
+#поле под дату рождения(внутри поля)
+#sünnikuupäeva väli (välja sees)
+     self.entry_age = ctk.CTkEntry(frame, placeholder_text="Sünnikuupäev")
+     self.entry_age.pack(pady=5, fill="x")
+#поле под год окончания школы(внутри поля)
+#kooli lõpetamise aasta väli (välja sees)
+     self.entry_school = ctk.CTkEntry(frame, placeholder_text="Kooli lõpetamise aasta")
+     self.entry_school.pack(pady=5, fill="x")
+#поле под пол(внутри поля)
+#väli sugu all (välja sees)  
+     self.entry_sugu = ctk.CTkEntry(frame, placeholder_text="sugu")
+     self.entry_sugu.pack(pady=5, fill="x")
 
   # кнопка сохранить
   #salvestamise nupp
