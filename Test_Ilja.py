@@ -11,17 +11,16 @@ class MyWindow:
 #коробка которая не даст поля ввода быть разбросанными 
 #kast, mis hoiab sisestusväljad korras 
     
-# Заголовки
-# Pealkirjad
-     tk.Label(self.window, text="Имя").grid(row=0, column=0)
-     tk.Label(self.window, text="Фамилия").grid(row=0, column=1, padx=15) 
-    # Поля ввода (под ними)
-    # Sisestusväljad (nende all)
-     self.entry_name = tk.Entry(self.window)
-     self.entry_name.grid(row=1, column=0)
+# Заголовок
+# Pealkirja
+    ctk.CTkLabel(frame, text="Registreerimine", font=("Arial", 20)).pack(pady=10)
+    # Поля ввода
+    # Sisestusväljad 
+     self.entry_name = ctk.CTkEntry(frame, placeholder_text="Имя")
+     self.entry_name.pack(pady=5, fill="x")
 
-     self.entry_surname = tk.Entry(self.window)
-     self.entry_surname.grid(row=1, column=1, padx=15)
+     self.entry_surname = ctk.CTkEntry(frame, placeholder_text="Фамилия")
+     self.entry_surname.pack(pady=5, fill="x")
 
      tk.Label(self.window, text="Личный код").grid(row=2, column=0, columnspan=2,sticky="w", padx=15)
 #поле ввода для личного кода
