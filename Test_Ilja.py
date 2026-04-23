@@ -52,14 +52,16 @@ class MyWindow:
 
 # кнопка сохранить
 # salvestamise nupp
-    Ctk.CTkButton(frame, text="Registreeruda", command=self.save).pack(padx=20)
+    ctk.CTkButton(frame, text="Registreeruda", command=self.save).pack(padx=20)
 # здесь мы пишем то что будет сохранять
 # siin kirjutame selle, mis salvestatakse
 def save(self):
       andmed=[
-      name = self.entry_name.get()
-      surname = self.entry_surname.get()
-      code = self.entry_code.get()
+      self.entry_name.get(),
+      self.entry_surname.get(),
+      self.entry_code.get(),
+      self.entry_phone.get(),
+      self.entry_age.get(),
 # сохраняем в файл
 # salvestame faili
 with open("data.txt", "w", encoding="utf-8") as f:
