@@ -56,13 +56,10 @@ class MyWindow:
 # здесь мы пишем то что будет сохранять
 # siin kirjutame selle, mis salvestatakse
 def save(self):
+      andmed=[
       name = self.entry_name.get()
       surname = self.entry_surname.get()
       code = self.entry_code.get()
-      phone = self.entry_phone.get()
-      age = self.entry_age.get()
-      school = self.entry_kool.get()
-      gender = self.entry_sugu.get()
 # сохраняем в файл
 # salvestame faili
 with open("data.txt", "w", encoding="utf-8") as f:
