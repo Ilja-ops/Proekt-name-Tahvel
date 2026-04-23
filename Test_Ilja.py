@@ -45,6 +45,10 @@ class MyWindow:
 #väli sugu all (välja sees)  
      self.entry_sugu = ctk.CTkEntry(frame, placeholder_text="sugu")
      self.entry_sugu.pack(pady=5, fill="x")
+#поле под адрес(внутри поля)
+#aadressiväli (välja sees)
+    self.entry_sugu = ctk.CTkEntry(frame, placeholder_text="Aadress")
+     self.entry_sugu.pack(pady=5, fill="x")
 
   # кнопка сохранить
   #salvestamise nupp
