@@ -5,9 +5,9 @@ class MyWindow:
     ctk.set_appearance_mode("light")
     ctk.set_default_color_theme("blue")
     
-     self.window = ctk.CTk()
-     self.window.title("Tahvel")
-     self.window.geometry("500x600")
+    self.window = ctk.CTk()
+    self.window.title("Tahvel")
+    self.window.geometry("500x600")
 #коробка которая не даст поля ввода быть разбросанными 
 #kast, mis hoiab sisestusväljad korras 
     
@@ -19,43 +19,43 @@ class MyWindow:
 
     #поле под имя(внутри поля)
     #nimeväli (välja sees)
-     self.entry_name = ctk.CTkEntry(frame, placeholder_text="Nimi")
-     self.entry_name.pack(pady=5, fill="x")
+    self.entry_name = ctk.CTkEntry(frame, placeholder_text="Nimi")
+    self.entry_name.pack(pady=5, fill="x")
 #поле под фамлию(внутри поля)
 #perekonnanime väli (välja sees)
-     self.entry_surname = ctk.CTkEntry(frame, placeholder_text="perekonnanimi")
-     self.entry_surname.pack(pady=5, fill="x")
+    self.entry_surname = ctk.CTkEntry(frame, placeholder_text="perekonnanimi")
+    self.entry_surname.pack(pady=5, fill="x")
 #поле под личный код(внутри поля)
 #isikliku koodi väli (välja sees)
-     self.entry_code = ctk.CTkEntry(frame, placeholder_text="isikukood")
-     self.entry_code.pack(pady=5, fill="x")
+    self.entry_code = ctk.CTkEntry(frame, placeholder_text="isikukood")
+    self.entry_code.pack(pady=5, fill="x")
 #поле под телефон(внутри поля)
 #telefoninumber (välja sees)
-     self.entry_phone = ctk.CTkEntry(frame, placeholder_text="Telefon")
-     self.entry_phone.pack(pady=5, fill="x")
+    self.entry_phone = ctk.CTkEntry(frame, placeholder_text="Telefon")
+    self.entry_phone.pack(pady=5, fill="x")
 #поле под дату рождения(внутри поля)
 #sünnikuupäeva väli (välja sees)
-     self.entry_age = ctk.CTkEntry(frame, placeholder_text="Sünnikuupäev")
-     self.entry_age.pack(pady=5, fill="x")
+    self.entry_age = ctk.CTkEntry(frame, placeholder_text="Sünnikuupäev")
+    self.entry_age.pack(pady=5, fill="x")
 #поле под год окончания школы(внутри поля)
 #kooli lõpetamise aasta väli (välja sees)
-     self.entry_school = ctk.CTkEntry(frame, placeholder_text="Kooli lõpetamise aasta")
-     self.entry_school.pack(pady=5, fill="x")
+    self.entry_school = ctk.CTkEntry(frame, placeholder_text="Kooli lõpetamise aasta")
+    self.entry_school.pack(pady=5, fill="x")
 #поле под пол(внутри поля)
 #väli sugu all (välja sees)  
-     self.entry_sugu = ctk.CTkEntry(frame, placeholder_text="sugu")
-     self.entry_sugu.pack(pady=5, fill="x")
+    self.entry_sugu = ctk.CTkEntry(frame, placeholder_text="sugu")
+    self.entry_sugu.pack(pady=5, fill="x")
 #поле под адрес(внутри поля)
 #aadressiväli (välja sees)
     self.entry_sugu = ctk.CTkEntry(frame, placeholder_text="Aadress")
-     self.entry_sugu.pack(pady=5, fill="x")
+    self.entry_sugu.pack(pady=5, fill="x")
 
   # кнопка сохранить
   #salvestamise nupp
     tk.Button(self.window, text="Сохранить", command=self.save).grid(row=6, column=0, columnspan=2)
 #здесь мы пишем то что будет сохранять
 #siin kirjutame selle, mis salvestatakse
- def save(self):
+def save(self):
       name = self.entry_name.get()
       surname = self.entry_surname.get()
       code = self.entry_code.get()
@@ -65,7 +65,7 @@ class MyWindow:
       gender = self.entry_sugu.get()
 # сохраняем в файл
 # salvestame faili
-     with open("data.txt", "w", encoding="utf-8") as f:
+with open("data.txt", "w", encoding="utf-8") as f:
           f.write(name + "\n")
           f.write(surname + "\n")
           f.write(code + "\n")
@@ -73,24 +73,6 @@ class MyWindow:
           f.write(age + "\n")
           f.write(school + "\n")
           f.write(gender + "\n")
-# открываем новое окно
-# avame uue akna
-      self.open_andme()
-# новое окно 
-# uus aken 
-def open_andme(self):
-      andme = tk.Toplevel(self.window)
-      andme.title("Andmete sisestamine")
-      andme.geometry("450x200")
-
-      tk.Label(self.window, text="Aadress").grid(row=0, column=0)
-      tk.Label(self.window, text="Esindaja").grid(row=0, column=1, padx=15)
-
-      self.entry_aadress = tk.Entry(andme)
-      self.entry_aadress.grid(row=1, column=0)
-
-      self.entry_esindaja = tk.Entry(andme)
-      self.entry_esindaja.grid(row=1, column=1, padx=15)
 
 def run(self):
     self.window.mainloop()
