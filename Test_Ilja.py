@@ -50,6 +50,12 @@ class MyWindow:
     self.entry_sugu = ctk.CTkEntry(frame, placeholder_text="Aadress")
     self.entry_sugu.pack(pady=5, fill="x")
 
+    self.entry_email = ctk.CTkEntry(frame, placeholder_text="Email")
+    self.entry_email.pack(pady=5, fill="x")
+
+    self.entry_lang = ctk.CTkEntry(frame, placeholder_text="suhtluskeel")
+    self.entry_lang.pack(pady=5, fill="x")
+
 # кнопка сохранить
 # salvestamise nupp
     ctk.CTkButton(frame, text="Registreeruda", command=self.save).pack(padx=20)
@@ -62,6 +68,10 @@ def save(self):
       self.entry_code.get(),
       self.entry_phone.get(),
       self.entry_age.get(),
+      self.entry_school.get(),
+      self.entry_sugu.get(),
+      self.entry_address.get(),
+      
 # сохраняем в файл
 # salvestame faili
 with open("data.txt", "w", encoding="utf-8") as f:
