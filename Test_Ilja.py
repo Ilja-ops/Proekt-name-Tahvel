@@ -73,8 +73,10 @@ andmed = [
       self.entry_address.get(),
 
 with open("andmed.txt", "w", encoding="utf-8") as f:
-     for i in data:
+     for i in andmed:
          f.write(i + "\n")
+       
+print("Registreeritud")
 # сохраняем в файл
 # salvestame faili
 
