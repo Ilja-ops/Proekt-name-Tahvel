@@ -62,7 +62,7 @@ class MyWindow:
 # здесь мы пишем то что будет сохранять
 # siin kirjutame selle, mis salvestatakse
 def save(self):
-      andmed=[
+andmed = [
       self.entry_name.get(),
       self.entry_surname.get(),
       self.entry_code.get(),
@@ -71,7 +71,10 @@ def save(self):
       self.entry_school.get(),
       self.entry_sugu.get(),
       self.entry_address.get(),
-      
+
+with open("andmed.txt", "w", encoding="utf-8") as f:
+     for i in data:
+         f.write(i + "\n")
 # сохраняем в файл
 # salvestame faili
 
