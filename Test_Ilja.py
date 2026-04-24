@@ -74,14 +74,7 @@ def save(self):
       
 # сохраняем в файл
 # salvestame faili
-with open("data.txt", "w", encoding="utf-8") as f:
-          f.write(name + "\n")
-          f.write(surname + "\n")
-          f.write(code + "\n")
-          f.write(phone + "\n")
-          f.write(age + "\n")
-          f.write(school + "\n")
-          f.write(gender + "\n")
+
 
 def run(self):
     self.window.mainloop()
