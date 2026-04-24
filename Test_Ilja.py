@@ -88,6 +88,13 @@ def open_profile(self):
     profile = ctk.CTk()
     profile.title("Профиль")
     profile.geometry("600x600")
+#создал по типу коробки что бы в нем находились все данные
+#Lõin kasti tüüpi struktuuri, et kõik andmed oleksid seal olemas
+frame = ctk.CTkFrame(profile)
+frame.pack(pady=20, padx=20, fill="both", expand=True)
+#добавил надпись окна
+#lisasin akna sildi
+ctk.CTkLabel(frame, text="Profiil", font=("Arial", 22)).pack(pady=15)
 
 def run(self):
     self.window.mainloop()
