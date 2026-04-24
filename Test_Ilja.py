@@ -71,15 +71,23 @@ andmed = [
       self.entry_school.get(),
       self.entry_sugu.get(),
       self.entry_address.get(),
-
+# сохраняем в файл
+# salvestame faili
 with open("andmed.txt", "w", encoding="utf-8") as f:
      for i in andmed:
          f.write(i + "\n")
        
 print("Registreeritud")
-# сохраняем в файл
-# salvestame faili
-
+#закрывает окно с регистрацией и открывает окно с профилем
+#sulgeb registreerimisakna ja avab profiiliakna
+self.window.destroy()
+self.open_profile()
+#создаем новое окно под профиль
+#loome profiili jaoks uue akna
+def open_profile(self):
+    profile = ctk.CTk()
+    profile.title("Профиль")
+    profile.geometry("600x600")
 
 def run(self):
     self.window.mainloop()
