@@ -96,6 +96,9 @@ frame.pack(pady=20, padx=20, fill="both", expand=True)
 #lisasin akna sildi
 ctk.CTkLabel(frame, text="Profiil", font=("Arial", 22)).pack(pady=15)
 
+with open("andmed.txt", "r", encoding="utf-8") as f:
+     andmed = f.readlines()
+
 def run(self):
     self.window.mainloop()
 
