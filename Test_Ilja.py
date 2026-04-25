@@ -117,7 +117,9 @@ lists = [
         table = ctk.CTkFrame(frame)
         table.pack(pady=10, fill="both", expand=True)
 
+        for i in range(len(lists)):
 
+          
 def run(self):
     self.window.mainloop()
 
