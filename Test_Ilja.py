@@ -8,22 +8,22 @@ class MyWindow:
     self.window = ctk.CTk()
     self.window.title("Tahvel")
     self.window.geometry("500x600")
-# коробка которая не даст поля ввода быть разбросанными 
-# kast, mis hoiab sisestusväljad korras 
+# создает по типу коробки в котором будут поля ввода  #fill=both делает коробку
+# loob kasti tüüpi, milles on sisestusväljad   #fill=both loob raami
     frame = ctk.CTkFrame(self.window)
     frame.pack(pady=20, padx=20, fill="both", expand=True) 
-# Заголовок
-# Pealkirja
+# Заголовок  #pady=10 делает отступ по вертикали
+# Pealkirja  #pady=10 loob vertikaalse taanduse
     ctk.CTkLabel(frame, text="Registreerimine", font=("Arial", 20)).pack(pady=10)
 # Поля ввода
 # Sisestusväljad 
 
-# поле под имя(внутри поля)
-# nimeväli (välja sees)
+# поле ввода под имя(внутри поля)  #fill="x" заставляет растягиватся по горизонтали на всю доступную ширину
+# nime sisestusväli (välja sees)  #fill=„x“ sunnib seda horisontaalselt kogu kättesaadava laiuseni venima
     self.entry_name = ctk.CTkEntry(frame, placeholder_text="Nimi")
     self.entry_name.pack(pady=5, fill="x")
-# поле под фамлию(внутри поля)
-# perekonnanime väli (välja sees)
+# поле ввода под фамлию(внутри поля)
+# perekonnanime sisestusväli (välja sees)
     self.entry_surname = ctk.CTkEntry(frame, placeholder_text="perekonnanimi")
     self.entry_surname.pack(pady=5, fill="x")
 # поле под личный код(внутри поля)
@@ -57,8 +57,8 @@ class MyWindow:
     self.entry_lang = ctk.CTkEntry(frame, placeholder_text="suhtluskeel")
     self.entry_lang.pack(pady=5, fill="x")
 
-# кнопка сохранить
-# salvestamise nupp
+# кнопка сохранить   # padx=20 делает горизонтальный отступ
+# salvestamise nupp  # padx=20 loob horisontaalse tühiku
     ctk.CTkButton(frame, text="Registreeruda", command=self.save).pack(padx=20)
 # здесь мы пишем то что будет сохранять
 # siin kirjutame selle, mis salvestatakse
@@ -74,7 +74,7 @@ andmed = [
       self.entry_address.get(),
 # сохраняем в файл
 # salvestame faili
-with open("andmed.txt", "w", encoding="utf-8") as f:
+with open("andmed.txt", "w") as f:
      for i in andmed:
          f.write(i + "\n")
        
@@ -83,8 +83,8 @@ print("Registreeritud")
 #sulgeb registreerimisakna ja avab profiiliakna
 self.window.destroy()
 self.open_profile()
-#создаем новое окно под профиль
-#loome profiili jaoks uue akna
+#создает новое окно под профиль
+#loob profiili jaoks uue akna
 def open_profile(self):
     profile = ctk.CTk()
     profile.title("Профиль")
@@ -96,7 +96,8 @@ frame.pack(pady=20, padx=20, fill="both", expand=True)
 #добавил надпись окна
 #lisasin akna sildi
 ctk.CTkLabel(frame, text="Profiil", font=("Arial", 22)).pack(pady=15)
-
+# читает текстовый файл и потом данные с файла возвращает в окно с профилем 
+# loeb tekstifaili ja kuvab seejärel faili andmed profiiliaknas 
 with open("andmed.txt", "r", encoding="utf-8") as f:
      andmed = f.readlines()
 
