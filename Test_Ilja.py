@@ -22,8 +22,8 @@ class MyWindow:
 # nime sisestusväli (välja sees)  #fill=„x“ sunnib seda horisontaalselt kogu kättesaadava laiuseni venima
     self.entry_name = ctk.CTkEntry(frame, placeholder_text="Nimi")
     self.entry_name.pack(pady=5, fill="x")
-# поле ввода под фамлию(внутри поля)
-# perekonnanime sisestusväli (välja sees)
+# поле ввода под фамлию(внутри поля)   #.pack размещает все слова в столбик
+# perekonnanime sisestusväli (välja sees)   #.pack paigutab kõik sõnad ühte veergu
     self.entry_surname = ctk.CTkEntry(frame, placeholder_text="perekonnanimi")
     self.entry_surname.pack(pady=5, fill="x")
 # поле под личный код(внутри поля)
@@ -100,6 +100,23 @@ ctk.CTkLabel(frame, text="Profiil", font=("Arial", 22)).pack(pady=15)
 # loeb tekstifaili ja kuvab seejärel faili andmed profiiliaknas 
 with open("andmed.txt", "r", encoding="utf-8") as f:
      andmed = f.readlines()
+
+lists = [
+            "Nimi",
+            "perekonnanimi",
+            "isikukood",
+            "Telefon",
+            "Sünnikuupäev",
+            "Kooli lõpetamise aasta",
+            "sugu",
+            "Aadress",
+            "Email",
+            "suhtluskeel"
+        ]
+
+        table = ctk.CTkFrame(frame)
+        table.pack(pady=10, fill="both", expand=True)
+
 
 def run(self):
     self.window.mainloop()
