@@ -10,7 +10,8 @@ class MyWindow:
     self.window.geometry("500x600")
 # коробка которая не даст поля ввода быть разбросанными 
 # kast, mis hoiab sisestusväljad korras 
-    
+    frame = ctk.CTkFrame(self.window)
+    frame.pack(pady=20, padx=20, fill="both", expand=True) 
 # Заголовок
 # Pealkirja
     ctk.CTkLabel(frame, text="Registreerimine", font=("Arial", 20)).pack(pady=10)
