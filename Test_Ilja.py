@@ -113,10 +113,12 @@ lists = [
             "Email",
             "suhtluskeel"
         ]
-
+# создает по типу коробки в котором будут поля ввода  #fill=both делает коробку
+# loob kasti tüüpi, milles on sisestusväljad   #fill=both loob raami
         table = ctk.CTkFrame(frame)
         table.pack(pady=10, fill="both", expand=True)
-
+# цикл создаёт список подписей слева в таблице, с названиями полей
+# tsükkel loob tabelis vasakul asuva allkirjade loendi, milles on väljade nimed
         for i in range(len(lists)):
           ctk.CTkLabel(
                 table,
@@ -124,10 +126,11 @@ lists = [
                 width=200,
                 anchor="w"
             ).grid(row=i, column=0, padx=20, pady=8, sticky="w")
-
+# создаёт список подписей справа в таблице, с данными пользователя
+# loob tabeli paremale serva allkirjade loendi, mis sisaldab kasutaja andmeid
             ctk.CTkLabel(
                 table,
-                text=andmed[i].strip(),
+                text=data[i].strip(),
                 anchor="w"
             ).grid(row=i, column=1, padx=20, pady=8, sticky="w")
 
