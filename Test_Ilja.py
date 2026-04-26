@@ -118,6 +118,18 @@ lists = [
         table.pack(pady=10, fill="both", expand=True)
 
         for i in range(len(lists)):
+          ctk.CTkLabel(
+                table,
+                text=lists[i],
+                width=200,
+                anchor="w"
+            ).grid(row=i, column=0, padx=20, pady=8, sticky="w")
+
+            ctk.CTkLabel(
+                table,
+                text=andmed[i].strip(),
+                anchor="w"
+            ).grid(row=i, column=1, padx=20, pady=8, sticky="w")
 
           
 def run(self):
