@@ -98,7 +98,7 @@ frame.pack(pady=20, padx=20, fill="both", expand=True)
 ctk.CTkLabel(frame, text="Profiil", font=("Arial", 22)).pack(pady=15)
 # читает текстовый файл и потом данные с файла возвращает в окно с профилем 
 # loeb tekstifaili ja kuvab seejärel faili andmed profiiliaknas 
-with open("andmed.txt", "r", encoding="utf-8") as f:
+with open("andmed.txt", "r") as f:
      andmed = f.readlines()
 
 lists = [
