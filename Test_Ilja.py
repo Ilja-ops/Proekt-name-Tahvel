@@ -133,7 +133,8 @@ lists = [
                 text=data[i].strip(),
                 anchor="w"
             ).grid(row=i, column=1, padx=20, pady=8, sticky="w")
-
+#здесь выходим с аккаунта,и открывается окно регистрации
+#Siin logime kontolt välja ja avaneb registreerimisaken
           
 def run(self):
     self.window.mainloop()
