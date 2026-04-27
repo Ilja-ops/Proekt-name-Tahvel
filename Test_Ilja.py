@@ -60,6 +60,14 @@ class MyWindow:
 # кнопка сохранить   # padx=20 делает горизонтальный отступ
 # salvestamise nupp  # padx=20 loob horisontaalse tühiku
     ctk.CTkButton(frame, text="Registreeruda", command=self.save).pack(padx=20)
+# меняет тему профиля с белого на черный
+# muudab profiili taustavärvi valgest mustaks
+def toggle_theme(self):
+        if ctk.get_appearance_mode() == "Light":
+            ctk.set_appearance_mode("dark")
+        else:
+            ctk.set_appearance_mode("light")
+
 # здесь мы пишем то что будет сохранять
 # siin kirjutame selle, mis salvestatakse
 def save(self):
@@ -133,14 +141,30 @@ lists = [
                 text=data[i].strip(),
                 anchor="w"
             ).grid(row=i, column=1, padx=20, pady=8, sticky="w")
+#делает коробку в которой будут находиться смена темы и выход с акаунта
+#teeb kasti, kus asuvad teema vahetamine ja kontolt väljumine
+        buttons_frame = ctk.CTkFrame(frame)
+        buttons_frame.pack(pady=15)
+#кнопка изменты темы профиля с белого на черный
+#nupp profiili teema muutmiseks valgest mustaks
+        ctk.CTkButton(
+            buttons_frame,
+            text="Сменить тему",
+            command=self.toggle_theme
+        ).pack(side="left", padx=10)
 #здесь выходим с аккаунта,и открывается окно регистрации
 #Siin logime kontolt välja ja avaneb registreerimisaken
- def logout():
+        def logout():
             profile.destroy()
             self.__init__()
             self.run()
 
-        ctk.CTkButton(frame,text="Выйти из аккаунта",fg_color="red",command=logout).pack(pady=15)
+        ctk.CTkButton(
+            buttons_frame,
+            text="Выйти",
+            fg_color="red",
+            command=logout
+        ).pack(side="left", padx=10)
 
         profile.mainloop()
           
