@@ -135,6 +135,14 @@ lists = [
             ).grid(row=i, column=1, padx=20, pady=8, sticky="w")
 #здесь выходим с аккаунта,и открывается окно регистрации
 #Siin logime kontolt välja ja avaneb registreerimisaken
+ def logout():
+            profile.destroy()
+            self.__init__()
+            self.run()
+
+        ctk.CTkButton(frame,text="Выйти из аккаунта",fg_color="red",command=logout).pack(pady=15)
+
+        profile.mainloop()
           
 def run(self):
     self.window.mainloop()
