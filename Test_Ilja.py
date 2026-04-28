@@ -71,6 +71,10 @@ def toggle_theme(self):
 # здесь мы пишем то что будет сохранять
 # siin kirjutame selle, mis salvestatakse
 def save(self):
+# проверяет поля ввода на правильность именно что бы в номере только цифры, поля были все заполнены и в почте с символом @
+# kontrollib sisestusväljade õigsust, et numbris oleksid ainult numbrid, kõik väljad oleksid täidetud ja e-posti aadressis oleks @-märk
+
+
 andmed = [
       self.entry_name.get(),
       self.entry_surname.get(),
