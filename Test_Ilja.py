@@ -68,13 +68,27 @@ def toggle_theme(self):
         else:
             ctk.set_appearance_mode("light")
 
-# здесь мы пишем то что будет сохранять
-# siin kirjutame selle, mis salvestatakse
-def save(self):
 # проверяет поля ввода на правильность именно что бы в номере только цифры, поля были все заполнены и в почте с символом @
 # kontrollib sisestusväljade õigsust, et numbris oleksid ainult numbrid, kõik väljad oleksid täidetud ja e-posti aadressis oleks @-märk
+def save(self):
+    name = self.entry_name.get()
+    phone = self.entry_phone.get()
+    email = self.entry_email.get()
 
+    if name == "" or phone == "" or email == "":
+          print("Заполни поля")
+          return
 
+    if not phone.isdigit():
+          print("Телефон только цифры")
+          return
+
+    if "@" not in email:
+          print("Неправильный email")
+          return
+
+# здесь мы пишем то что будет сохранять
+# siin kirjutame selle, mis salvestatakse
 andmed = [
       self.entry_name.get(),
       self.entry_surname.get(),
