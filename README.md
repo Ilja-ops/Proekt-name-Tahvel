@@ -1,2 +1,5 @@
 # Proekt-name-Tahvel
-See on sarnane Tahveliga, kuid tegemist on mini-versiooniga, kus on registreerimisaken ja pärast registreerimist suunatakse kasutaja otse profiili, kus kuvatakse kogu varem sisestatud teave.
+Projekt Tahvel on lihtne programm, mis töötab nagu elektrooniline päevik. Programmis saab kasutaja sisestada oma andmed, salvestada need faili ja hiljem vaadata neid profiili aknas.
+Programmis on olemas registreerimisvorm erinevate sisestusväljadega, andmete kontroll (tühjad väljad, telefon, e-mail), andmete salvestamine faili ning profiili vaade tabelina. Lisaks on võimalik muuta teemat (hele/tume) ja väljuda kontolt.
+
+Projekti töö tegin üksi.
