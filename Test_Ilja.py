@@ -85,7 +85,8 @@ class MyWindow:
     name = self.entry_name.get()
     phone = self.entry_phone.get()
     email = self.entry_email.get()
-
+#если что либо будет не правильным в терминале выскочит ошибка и не даст зарегистрироватся
+#kui terminalis on midagi valesti, ilmub veateade ja registreerumine ei õnnestu
     if name == "" or phone == "" or email == "":
           print("Заполни поля")
           return
@@ -98,8 +99,8 @@ class MyWindow:
           print("Неправильный email")
           return
 
-# здесь мы пишем то что будет сохранять
-# siin kirjutame selle, mis salvestatakse
+# здесь мы пишем то что будет сохранять в текстовый файл
+# siia kirjutame selle, mis salvestatakse tekstifaili
     andmed = [
           self.entry_name.get(),
           self.entry_surname.get(),
@@ -113,8 +114,8 @@ class MyWindow:
           self.entry_lang.get(),
     ]
 
-# сохраняем в файл
-# salvestame faili
+# здесь после нажатия кнопки зарегистрироватся , сохраняет данные в текстовый файл
+# siin salvestatakse pärast nupule vajutamist registreerimisandmed tekstifaili
     with open("andmed.txt", "w") as f:
          for i in andmed:
              f.write(i + "\n")
@@ -130,7 +131,7 @@ class MyWindow:
 #loob profiili jaoks uue akna
   def open_profile(self):
        profile = ctk.CTk()
-       profile.title("Профиль")
+       profile.title("Profiil")
        profile.geometry("600x600")
 
 #создал по типу коробки что бы в нем находились все данные
@@ -138,7 +139,7 @@ class MyWindow:
        frame = ctk.CTkFrame(profile)
        frame.pack(pady=20, padx=20, fill="both", expand=True)
 
-#добавил надпись окна
+#добавил надпись окна     font=("Arial", 22) задает шрифт и размер текста
 #lisasin akna sildi
        ctk.CTkLabel(frame, text="Profiil", font=("Arial", 22)).pack(pady=15)
 
@@ -181,7 +182,7 @@ class MyWindow:
 
 #кнопка изменты темы профиля с белого на черный
 #nupp profiili teema muutmiseks valgest mustaks
-       ctk.CTkButton(buttons_frame,text="Сменить тему",command=self.toggle_theme).pack(side="left", padx=10)
+       ctk.CTkButton(buttons_frame,text="Teema vahetamine",command=self.toggle_theme).pack(side="left", padx=10)
 
 #здесь выходим с аккаунта,и открывается окно регистрации
 #Siin logime kontolt välja ja avaneb registreerimisaken
@@ -190,10 +191,11 @@ class MyWindow:
             self.__init__()
             self.run()
 
-       ctk.CTkButton(buttons_frame,text="Выйти",fg_color="red",command=logout).pack(side="left", padx=10)
+       ctk.CTkButton(buttons_frame,text="Logout",fg_color="red",command=logout).pack(side="left", padx=10)
 
        profile.mainloop()
-          
+#  запускает код
+# käivitab koodi
   def run(self):
       self.window.mainloop()
 
