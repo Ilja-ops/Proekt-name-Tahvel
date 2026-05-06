@@ -5,6 +5,8 @@ class MyWindow:
     ctk.set_appearance_mode("light")
     ctk.set_default_color_theme("blue")
     
+# создает окно Tahvel под регистрацию
+# loob registreerimiseks akna „Tahvel“
     self.window = ctk.CTk()
     self.window.title("Tahvel")
     self.window.geometry("500x600")
